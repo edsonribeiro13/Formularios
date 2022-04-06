@@ -1,26 +1,93 @@
-package visao;
+package controle;
+
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 
-public class BarradeMenu extends JMenu {
+import visao.Frame;
 
-	private static BarradeMenu barradeMenu = new BarradeMenu();
-	public JMenuItem cadastroProfessor = new JMenuItem("Novo Professor");
-	private JMenuItem cadstroAluno = new JMenuItem("Novo Aluno");
-	private JMenuItem cadastroClasse = new JMenuItem("Nova Classe");
-	private JMenuItem cadastroDisciplina = new JMenuItem("Nova Disciplina");
-	private JMenuItem cadastroPerLet = new JMenuItem("Novo Período Letivo");
+public class ControleBarradeMenu extends JMenuItem implements MouseListener{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	
-	public BarradeMenu() {
+	private static JMenuItem cadastroProfessor = new JMenuItem("Novo Professor");
+	private static JMenuItem cadastroAluno = new JMenuItem("Novo Aluno");
+	private static JMenuItem cadastroClasse = new JMenuItem("Nova Classe");
+	private static JMenuItem cadastroDisciplina = new JMenuItem("Nova Disciplina");
+	private static JMenuItem cadastroPerLet = new JMenuItem("Novo Período Letivo");
+	private static JMenu barradeMenu = new JMenu("Salvar");
+	//private static Handler handler = new Handler();
+	
+	private static Frame frame = new Frame();
+	
+	public ControleBarradeMenu() {
 		super();
+		cadastroAluno.addMouseListener(this);
 	}
 	
-	public static BarradeMenu novo() {
-		BarradeMenu.add(cadastroProfessor);
+	public static JMenu novoSalvar() {
+		frame = ControladorFrame.getFrameAtual();
+		
+		new ControleBarradeMenu();
+		
+		barradeMenu.add(getCadastroProfessor());
+		barradeMenu.add(getCadastroAluno());
+		barradeMenu.add(getCadastroClasse());
+		barradeMenu.add(getCadastroDisciplina());
+		barradeMenu.add(getCadastroPerLet());
 		
 		return barradeMenu;
 	}
+	
+	public static JMenuItem getCadastroProfessor() {
+		return cadastroProfessor;
+	}
+		
+	public static JMenuItem getCadastroAluno() {
+		return cadastroAluno;
+	}
+		
+	public static JMenuItem getCadastroClasse() {
+		return cadastroClasse;
+	}
+	
+	public static JMenuItem getCadastroDisciplina() {
+		return cadastroDisciplina;
+	}
+	
+	public static JMenuItem getCadastroPerLet() {
+		return cadastroPerLet;
+	}
 
+	@Override
+	public void mouseClicked(MouseEvent e) {	
+	}
 
+	@Override
+	public void mousePressed(MouseEvent e) {
+		if(e.getComponent() == cadastroAluno) {
+			frame.setContentPane(Frame.getTelaaluno());
+			System.out.println(e);
+		}
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {	
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {		
+	}
+		
+	
+	
 }

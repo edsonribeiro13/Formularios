@@ -3,7 +3,8 @@ package visao;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
+
+import controle.ControleBarradeMenu;
 
 public class Frame extends JFrame {
 	
@@ -12,42 +13,37 @@ public class Frame extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	PanelCadastrarprofessor telaCadastroProfessor;
-	TelaCadastroAluno telaCadastroAluno;
-	TelaCadastroClasse telaCadastroClasse;
-	TelaCadastroDisciplina telaCadastroDisciplina;
-	TelaCadastroPerLet telaCadastroPerLet;
+	private static PanelCadastrarprofessor telaCadastroProfessor;
+	private static TelaCadastroAluno telaCadastroAluno;
+	private static TelaCadastroClasse telaCadastroClasse;
+	private static TelaCadastroDisciplina telaCadastroDisciplina;
+	private static TelaCadastroPerLet telaCadastroPerLet;
 	
-	public JMenuItem menuCadastroProfessor = new JMenuItem("Novo Professor");
-	private JMenuItem menuCadastroAluno = new JMenuItem("Novo Aluno");
-	private JMenuItem menuCadastroClasse = new JMenuItem("Nova Classe");
-	private JMenuItem menuCadastroDisciplina = new JMenuItem("Nova Disciplina");
-	private JMenuItem menuCadastroPerLet = new JMenuItem("Novo Período Letivo");
+	private static JMenu menuSalvar;
 	
-	private JMenu menuSalvar;
+	private static JMenuBar bar;
 	
-	private JMenuBar bar;
+	private static Frame frame = new Frame();
 	
 	public Frame() {
 		
-		super("Minha tela");
-		this.setVisible(true);
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE);;
-		this.setSize(800, 800);
-		this.setLocationRelativeTo(null);
-		this.setJMenuBar(getBar());
+		super();
 		
-		//Get para definir o painel após o clique no menu, colocar dentro de eventos
-		this.setContentPane(getTelaaluno());
-		this.setContentPane(getPanelCadastrarprofessor());
-		this.setContentPane(getTelaCadastroClasse());
-		this.setContentPane(getTelaCadastroDisciplina());
-		this.setContentPane(getTelaCadastroPerLet());
-		
-		repaint();
 	}
 	
-	public TelaCadastroAluno getTelaaluno() {
+	public static Frame novoFrame() {
+		
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);;
+		frame.setSize(800, 800);
+		frame.setLocationRelativeTo(null);
+		
+		frame.setJMenuBar(getBar());
+		
+		return frame;
+	}
+	
+	public static TelaCadastroAluno getTelaaluno() {
 		if(telaCadastroAluno == null)
 			telaCadastroAluno = new TelaCadastroAluno();
 		
@@ -55,7 +51,7 @@ public class Frame extends JFrame {
 		return telaCadastroAluno;
 	}
 
-	public PanelCadastrarprofessor getPanelCadastrarprofessor() {
+	public static PanelCadastrarprofessor getPanelCadastrarprofessor() {
 		if(telaCadastroProfessor == null)
 			telaCadastroProfessor = new PanelCadastrarprofessor();
 		
@@ -63,7 +59,7 @@ public class Frame extends JFrame {
 		return telaCadastroProfessor;
 	}
 
-	public TelaCadastroClasse getTelaCadastroClasse() {
+	public static TelaCadastroClasse getTelaCadastroClasse() {
 		if(telaCadastroClasse == null)
 			telaCadastroClasse = new TelaCadastroClasse();
 		
@@ -71,7 +67,7 @@ public class Frame extends JFrame {
 		return telaCadastroClasse;
 	}
 
-	public TelaCadastroDisciplina getTelaCadastroDisciplina() {
+	public static TelaCadastroDisciplina getTelaCadastroDisciplina() {
 		if(telaCadastroDisciplina == null)
 			telaCadastroDisciplina = new TelaCadastroDisciplina();
 		
@@ -79,7 +75,7 @@ public class Frame extends JFrame {
 		return telaCadastroDisciplina;
 	}
 
-	public TelaCadastroPerLet getTelaCadastroPerLet() {
+	public static TelaCadastroPerLet getTelaCadastroPerLet() {
 		if(telaCadastroPerLet == null)
 			telaCadastroPerLet = new TelaCadastroPerLet();
 		
@@ -87,47 +83,21 @@ public class Frame extends JFrame {
 		return telaCadastroPerLet;
 	}
 
-	public JMenuBar getBar() {
+	public static JMenuBar getBar() {
 		if(bar == null)
 			bar = new JMenuBar();
 		bar.add(getMenuSalvar());
 		return bar;
 	}
 
-	public JMenu getMenuSalvar() {
-		if (menuSalvar == null)
-			menuSalvar = new JMenu("Salvar");
+	public static JMenu getMenuSalvar() {
+		if (menuSalvar == null) {
+			menuSalvar = new JMenu();
+		}
 		
-		menuSalvar.add(getMenuCadastroProfessor());
-		menuSalvar.add(getMenuCadastroAluno());
-		menuSalvar.add(getMenuCadastroClasse());
-		menuSalvar.add(getMenuCadastroDisciplina());
-		menuSalvar.add(getMenuCadastroPerLet());
+		menuSalvar = ControleBarradeMenu.novoSalvar();
 		
 		return menuSalvar;
 	}
-
-	public JMenuItem getMenuCadastroProfessor() {
-		return menuCadastroProfessor;
-	}
-
-	public JMenuItem getMenuCadastroAluno() {
-		return menuCadastroAluno;
-	}
-
-	public JMenuItem getMenuCadastroClasse() {
-		return menuCadastroClasse;
-	}
-
-	public JMenuItem getMenuCadastroDisciplina() {
-		return menuCadastroDisciplina;
-	}
-
-	public JMenuItem getMenuCadastroPerLet() {
-		return menuCadastroPerLet;
-	}
-	
-	
-	
 
 }
