@@ -19,9 +19,8 @@ public class ControleBarradeMenu extends JMenuItem implements MouseListener{
 	private static JMenuItem cadastroAluno = new JMenuItem("Novo Aluno");
 	private static JMenuItem cadastroClasse = new JMenuItem("Nova Classe");
 	private static JMenuItem cadastroDisciplina = new JMenuItem("Nova Disciplina");
-	private static JMenuItem cadastroPerLet = new JMenuItem("Novo Período Letivo");
+	private static JMenuItem cadastroPerLet = new JMenuItem("Novo Perï¿½odo Letivo");
 	private static JMenu barradeMenu = new JMenu("Salvar");
-	//private static Handler handler = new Handler();
 	
 	private static Frame frame = new Frame();
 	
@@ -31,7 +30,6 @@ public class ControleBarradeMenu extends JMenuItem implements MouseListener{
 	}
 	
 	public static JMenu novoSalvar() {
-		frame = ControladorFrame.getFrameAtual();
 		
 		new ControleBarradeMenu();
 		
@@ -40,6 +38,8 @@ public class ControleBarradeMenu extends JMenuItem implements MouseListener{
 		barradeMenu.add(getCadastroClasse());
 		barradeMenu.add(getCadastroDisciplina());
 		barradeMenu.add(getCadastroPerLet());
+
+		frame = ControladorFrame.getFrameAtual();
 		
 		return barradeMenu;
 	}
@@ -71,7 +71,7 @@ public class ControleBarradeMenu extends JMenuItem implements MouseListener{
 	@Override
 	public void mousePressed(MouseEvent e) {
 		if(e.getComponent() == cadastroAluno) {
-			frame.setContentPane(Frame.getTelaaluno());
+			frame.setContentPane(visao.Frame.getTelaaluno());
 			System.out.println(e);
 		}
 	}
@@ -88,6 +88,4 @@ public class ControleBarradeMenu extends JMenuItem implements MouseListener{
 	public void mouseExited(MouseEvent e) {		
 	}
 		
-	
-	
 }
