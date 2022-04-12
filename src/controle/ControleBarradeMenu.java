@@ -2,11 +2,8 @@ package controle;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-
-import javax.swing.JMenu;
+import visao.MenuItems;
 import javax.swing.JMenuItem;
-
-import visao.Frame;
 
 public class ControleBarradeMenu extends JMenuItem implements MouseListener{
 
@@ -15,53 +12,15 @@ public class ControleBarradeMenu extends JMenuItem implements MouseListener{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private static JMenuItem cadastroProfessor = new JMenuItem("Novo Professor");
-	private static JMenuItem cadastroAluno = new JMenuItem("Novo Aluno");
-	private static JMenuItem cadastroClasse = new JMenuItem("Nova Classe");
-	private static JMenuItem cadastroDisciplina = new JMenuItem("Nova Disciplina");
-	private static JMenuItem cadastroPerLet = new JMenuItem("Novo Per�odo Letivo");
-	private static JMenu barradeMenu = new JMenu("Salvar");
-	
-	private static Frame frame = new Frame();
-	
 	public ControleBarradeMenu() {
-		super();
-		cadastroAluno.addMouseListener(this);
-	}
-	
-	public static JMenu novoSalvar() {
-		
-		new ControleBarradeMenu();
-		
-		barradeMenu.add(getCadastroProfessor());
-		barradeMenu.add(getCadastroAluno());
-		barradeMenu.add(getCadastroClasse());
-		barradeMenu.add(getCadastroDisciplina());
-		barradeMenu.add(getCadastroPerLet());
 
-		frame = ControladorFrame.getFrameAtual();
-		
-		return barradeMenu;
-	}
-	
-	public static JMenuItem getCadastroProfessor() {
-		return cadastroProfessor;
-	}
-		
-	public static JMenuItem getCadastroAluno() {
-		return cadastroAluno;
-	}
-		
-	public static JMenuItem getCadastroClasse() {
-		return cadastroClasse;
-	}
-	
-	public static JMenuItem getCadastroDisciplina() {
-		return cadastroDisciplina;
-	}
-	
-	public static JMenuItem getCadastroPerLet() {
-		return cadastroPerLet;
+		super();
+		MenuItems.getCadastroProfessor().addMouseListener(this);
+		MenuItems.getCadastroAluno().addMouseListener(this);
+		MenuItems.getCadastroClasse().addMouseListener(this);
+		MenuItems.getCadastroDisciplina().addMouseListener(this);
+		MenuItems.getCadastroPerLet().addMouseListener(this);
+
 	}
 
 	@Override
@@ -70,8 +29,24 @@ public class ControleBarradeMenu extends JMenuItem implements MouseListener{
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		if(e.getComponent() == cadastroAluno) {
-			frame.setContentPane(visao.Frame.getTelaaluno());
+		if(e.getComponent() == MenuItems.getCadastroProfessor()) {
+			ControladorFrame.getTelaCadastoProfessor();;
+			System.out.println(e);
+		}
+		if(e.getComponent() == MenuItems.getCadastroAluno()) {
+			ControladorFrame.getTelaCadastroAluno();
+			System.out.println(e);
+		}
+		if(e.getComponent() == MenuItems.getCadastroClasse()) {
+			ControladorFrame.getTelaCadastroClasse();;
+			System.out.println(e);
+		}
+		if(e.getComponent() == MenuItems.getCadastroDisciplina()) {
+			ControladorFrame.getTelaCadastroAluno();
+			System.out.println(e);
+		}
+		if(e.getComponent() == MenuItems.getCadastroPerLet()) {
+			ControladorFrame.getTelaCadastroAluno();
 			System.out.println(e);
 		}
 	}

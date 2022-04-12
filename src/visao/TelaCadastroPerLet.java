@@ -9,7 +9,7 @@ public class TelaCadastroPerLet extends JPanel {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private static TelaCadastroPerLet painel = new TelaCadastroPerLet();
+	private static TelaCadastroPerLet painel;
 	
 	public TelaCadastroPerLet() {
 		super();
@@ -22,5 +22,15 @@ public class TelaCadastroPerLet extends JPanel {
 		painel.setBackground(Color.BLACK);
 		return painel;
 		
+	}
+
+    public static TelaCadastroPerLet getTelaCadastroPerLet(){
+		if(painel == null){
+			painel = new TelaCadastroPerLet();
+			painel = TelaCadastroPerLet.criarPainel();
+		}
+
+		return painel;
+
 	}
 }

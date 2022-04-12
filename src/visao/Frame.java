@@ -4,8 +4,6 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 
-import controle.ControleBarradeMenu;
-
 public class Frame extends JFrame {
 	
 	/**
@@ -13,18 +11,11 @@ public class Frame extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private static PanelCadastrarprofessor telaCadastroProfessor;
-	private static TelaCadastroAluno telaCadastroAluno;
-	private static TelaCadastroClasse telaCadastroClasse;
-	private static TelaCadastroDisciplina telaCadastroDisciplina;
-	private static TelaCadastroPerLet telaCadastroPerLet;
-	
 	private static JMenu menuSalvar;
 	
 	private static JMenuBar bar;
 	
-	private static Frame frame = new Frame();
-	
+	private static Frame frame;
 	public Frame() {
 		
 		super();
@@ -43,44 +34,13 @@ public class Frame extends JFrame {
 		return frame;
 	}
 	
-	public static TelaCadastroAluno getTelaaluno() {
-		if(telaCadastroAluno == null)
-			telaCadastroAluno = new TelaCadastroAluno();
+	public static Frame getFrame(){
+		if(frame == null){
+			frame = new Frame();
+			frame = Frame.novoFrame();
+		}
 		
-		telaCadastroAluno = TelaCadastroAluno.criarPainel();
-		return telaCadastroAluno;
-	}
-
-	public static PanelCadastrarprofessor getPanelCadastrarprofessor() {
-		if(telaCadastroProfessor == null)
-			telaCadastroProfessor = new PanelCadastrarprofessor();
-		
-		telaCadastroProfessor = PanelCadastrarprofessor.criarPainel();
-		return telaCadastroProfessor;
-	}
-
-	public static TelaCadastroClasse getTelaCadastroClasse() {
-		if(telaCadastroClasse == null)
-			telaCadastroClasse = new TelaCadastroClasse();
-		
-		telaCadastroClasse = TelaCadastroClasse.criarPainel();
-		return telaCadastroClasse;
-	}
-
-	public static TelaCadastroDisciplina getTelaCadastroDisciplina() {
-		if(telaCadastroDisciplina == null)
-			telaCadastroDisciplina = new TelaCadastroDisciplina();
-		
-		telaCadastroDisciplina = TelaCadastroDisciplina.criarPainel();
-		return telaCadastroDisciplina;
-	}
-
-	public static TelaCadastroPerLet getTelaCadastroPerLet() {
-		if(telaCadastroPerLet == null)
-			telaCadastroPerLet = new TelaCadastroPerLet();
-		
-		telaCadastroPerLet = TelaCadastroPerLet.criarPainel();
-		return telaCadastroPerLet;
+		return frame;
 	}
 
 	public static JMenuBar getBar() {
@@ -95,7 +55,7 @@ public class Frame extends JFrame {
 			menuSalvar = new JMenu();
 		}
 		
-		menuSalvar = ControleBarradeMenu.novoSalvar();
+		menuSalvar = MenuItems.novoSalvar();
 		
 		return menuSalvar;
 	}

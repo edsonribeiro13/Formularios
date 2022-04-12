@@ -1,23 +1,28 @@
 package controle;
 
-import visao.Frame;
+import visao.*;
 
 public class ControladorFrame{
-
-	static Frame frame;
 	
-	public ControladorFrame() {
-		frame = new Frame();
-		frame = Frame.novoFrame();
-//		frame.getItemSalvar().addActionListener(this);
+	public static void getTelaCadastoProfessor() {
+		Frame.getFrame().setContentPane(visao.PanelCadastrarprofessor.getCadastrarprofessor());
 	}
-	
-	public static Frame getFrameAtual() {
-		return frame;
+	public static void getTelaCadastroAluno() {
+		Frame.getFrame().setContentPane(visao.TelaCadastroAluno.getTelaCadastroAluno());
+	}
+	public static void getTelaCadastroClasse() {
+		Frame.getFrame().setContentPane(visao.TelaCadastroClasse.getTelaCadastroClasse());
+	}
+	public static void getTelaCadastroDisciplina() {
+		Frame.getFrame().setContentPane(visao.TelaCadastroDisciplina.getTelaCadastroDisciplina());
+	}
+	public static void getTelaCadastroPerLet() {
+		Frame.getFrame().setContentPane(visao.TelaCadastroPerLet.getTelaCadastroPerLet());
 	}
 	
 	public static void main(String[] args) {
-		new ControladorFrame();
+		Frame.getFrame();
+		new ControleBarradeMenu();
 	}
 	
 }

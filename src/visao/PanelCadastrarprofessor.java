@@ -9,11 +9,10 @@ public class PanelCadastrarprofessor extends JPanel {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private static PanelCadastrarprofessor painel = new PanelCadastrarprofessor();
+	private static PanelCadastrarprofessor painel;
 	
 	public PanelCadastrarprofessor() {
 		super();
-		
 	}
 	
 	public static PanelCadastrarprofessor criarPainel() {
@@ -23,4 +22,15 @@ public class PanelCadastrarprofessor extends JPanel {
 		return painel;
 		
 	}
+
+	public static PanelCadastrarprofessor getCadastrarprofessor(){
+		if(painel == null){
+			painel = new PanelCadastrarprofessor();
+			painel = PanelCadastrarprofessor.criarPainel();
+		}
+
+		return painel;
+
+	}
+
 }

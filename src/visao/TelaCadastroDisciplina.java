@@ -1,6 +1,7 @@
 package visao;
 
 import java.awt.Color;
+import java.awt.Container;
 
 import javax.swing.JPanel;
 
@@ -22,5 +23,14 @@ public class TelaCadastroDisciplina extends JPanel {
 		painel.setBackground(Color.BLACK);
 		return painel;
 	}
+
+    public static Container getTelaCadastroDisciplina() {
+        if(painel == null){
+			painel = new TelaCadastroDisciplina();
+			painel = TelaCadastroDisciplina.criarPainel();
+		}
+
+		return painel;
+    }
 
 }
