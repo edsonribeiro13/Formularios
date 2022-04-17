@@ -20,6 +20,7 @@ public class ControleBarradeMenu extends JMenuItem implements MouseListener{
 		MenuItems.getCadastroClasse().addMouseListener(this);
 		MenuItems.getCadastroDisciplina().addMouseListener(this);
 		MenuItems.getCadastroPerLet().addMouseListener(this);
+		repaint();
 
 	}
 
@@ -31,23 +32,23 @@ public class ControleBarradeMenu extends JMenuItem implements MouseListener{
 	public void mousePressed(MouseEvent e) {
 		if(e.getComponent() == MenuItems.getCadastroProfessor()) {
 			ControladorFrame.getTelaCadastoProfessor();;
-			System.out.println(e);
+			repaint();
 		}
 		if(e.getComponent() == MenuItems.getCadastroAluno()) {
 			ControladorFrame.getTelaCadastroAluno();
-			System.out.println(e);
+			repaint();
 		}
 		if(e.getComponent() == MenuItems.getCadastroClasse()) {
-			ControladorFrame.getTelaCadastroClasse();;
-			System.out.println(e);
+			ControladorFrame.getTelaCadastroClasse();
+			repaint();
 		}
 		if(e.getComponent() == MenuItems.getCadastroDisciplina()) {
-			ControladorFrame.getTelaCadastroAluno();
-			System.out.println(e);
+			ControladorFrame.getTelaCadastroDisciplina();
+			repaint();
 		}
 		if(e.getComponent() == MenuItems.getCadastroPerLet()) {
-			ControladorFrame.getTelaCadastroAluno();
-			System.out.println(e);
+			ControladorFrame.getTelaCadastroPerLet();
+			repaint();
 		}
 	}
 

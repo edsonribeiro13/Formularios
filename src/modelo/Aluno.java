@@ -7,7 +7,6 @@ public class Aluno {
 	private String rg;
 	private String dataNascimento;
 	private String matricula;
-	private String endereco;
 	private String sexo;
 	private String curso;
 	
@@ -19,16 +18,17 @@ public class Aluno {
 		this.rg = rg;
 		this.dataNascimento = dataNascimento;
 		this.matricula = matricula;
-		this.endereco = endereco;
 		this.sexo = sexo;
 		this.curso = curso;
 	}
 
+	public void novoAluno(){
+		
+	}
 
 	public String getNome() {
 		return nome;
 	}
-
 
 	public void setNome(String nome) {
 		this.nome = nome;
@@ -73,17 +73,6 @@ public class Aluno {
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
-
-
-	public String getEndereco() {
-		return endereco;
-	}
-
-
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
-	}
-
 
 	public String getSexo() {
 		return sexo;

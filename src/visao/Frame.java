@@ -16,6 +16,7 @@ public class Frame extends JFrame {
 	private static JMenuBar bar;
 	
 	private static Frame frame;
+	
 	public Frame() {
 		
 		super();
