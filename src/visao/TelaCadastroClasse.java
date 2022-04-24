@@ -18,15 +18,19 @@ public class TelaCadastroClasse extends JPanel {
 	
 	public static TelaCadastroClasse criarPainel() {
 		painel.setVisible(true);
-		painel.setSize(790, 780);
+		painel.setSize(790, 880);
 		painel.setLayout(null);
 		painel.setBackground(Color.BLACK);
 
 		painel.add(Labels.getTitulo("Cadastro de classe"));
 		painel.add(Labels.getNomeLabel("Aluno"));
+		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("Professor"));
+		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("Periodo Letivo"));
+		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("Disciplina"));
+		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
 
 		Labels.setLabelNull();
 

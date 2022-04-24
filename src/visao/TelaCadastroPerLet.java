@@ -18,15 +18,19 @@ public class TelaCadastroPerLet extends JPanel {
 	
 	public static TelaCadastroPerLet criarPainel() {
 		painel.setVisible(true);
-		painel.setSize(790, 780);
+		painel.setSize(790, 880);
 		painel.setLayout(null);
 		painel.setBackground(Color.BLACK);
 
 		painel.add(Labels.getTitulo("Cadastro de Periodo"));
 		painel.add(Labels.getNomeLabel("Nome"));
+		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("Dias letivos"));
+		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("Data de inicio"));
+		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("Data de fim"));
+		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
 
 		Labels.setLabelNull();
 

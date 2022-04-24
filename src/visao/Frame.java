@@ -27,7 +27,7 @@ public class Frame extends JFrame {
 		
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);;
-		frame.setSize(800, 800);
+		frame.setSize(800, 900);
 		frame.setLocationRelativeTo(null);
 		
 		frame.setJMenuBar(getBar());
