@@ -1,5 +1,7 @@
 package controle;
 
+import javax.swing.JPanel;
+
 import visao.*;
 
 public class ControladorFrame{
@@ -19,9 +21,14 @@ public class ControladorFrame{
 	public static void getTelaCadastroPerLet() {
 		Frame.getFrame().setContentPane(visao.TelaCadastroPerLet.getTelaCadastroPerLet());
 	}
+
+	public static JPanel getPanel(){
+		return (JPanel) Frame.getFrame().getContentPane();
+	}
 	
 	public static void main(String[] args) {
 		new ControleBarradeMenu();
+		new ControleBotao();
 		Frame.getFrame();
 	}
 	

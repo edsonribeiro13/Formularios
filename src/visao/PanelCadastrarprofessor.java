@@ -1,5 +1,4 @@
 package visao;
-
 import javax.swing.JPanel;
 
 public class PanelCadastrarprofessor extends JPanel {
@@ -19,37 +18,38 @@ public class PanelCadastrarprofessor extends JPanel {
 		painel.setVisible(true);
 		painel.setSize(790, 880);
 		painel.setLayout(null);
-		painel.setBackground(css.getColor());
+		painel.setBackground(Utilidades.getColor());
 		
 		painel.add(Labels.getTitulo("Cadastro de professores"));
 		painel.add(Labels.getNomeLabel("Nome"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo1(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("CPF"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo2(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("RG"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo3(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("Data de Nascimento"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo4(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("Matricula"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo5(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("Titulacao"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo6(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("Regime de Trabalho"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo7(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("Área"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo8(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("logradouro"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo9(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("cidade"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo10(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("bairro"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo11(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("estado"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo12(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("complemento"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo13(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("numero"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo14(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getButton(Labels.getLabelX() + 250, Labels.getLabelY() + 50));
 
 		Labels.setLabelNull();
 
@@ -66,5 +66,4 @@ public class PanelCadastrarprofessor extends JPanel {
 		return painel;
 
 	}
-
 }

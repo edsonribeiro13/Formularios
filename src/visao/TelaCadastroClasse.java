@@ -24,13 +24,14 @@ public class TelaCadastroClasse extends JPanel {
 
 		painel.add(Labels.getTitulo("Cadastro de classe"));
 		painel.add(Labels.getNomeLabel("Aluno"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo1(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("Professor"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo2(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("Periodo Letivo"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo3(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("Disciplina"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo4(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getButton(Labels.getLabelX() + 250, Labels.getLabelY() + 50));
 
 		Labels.setLabelNull();
 

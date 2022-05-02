@@ -24,11 +24,12 @@ public class TelaCadastroDisciplina extends JPanel {
 
 		painel.add(Labels.getTitulo("Cadastro de Disciplina"));
 		painel.add(Labels.getNomeLabel("Nome"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo1(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("Ementa"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo2(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("Carga horária"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo3(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getButton(Labels.getLabelX() + 250, Labels.getLabelY() + 50));
 
 		Labels.setLabelNull();
 

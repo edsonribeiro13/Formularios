@@ -19,31 +19,32 @@ public class TelaCadastroAluno extends JPanel {
 		painel.setVisible(true);
 		painel.setSize(790, 880);
 		painel.setLayout(null);
-		painel.setBackground(visao.css.getColor());
+		painel.setBackground(visao.Utilidades.getColor());
 		
 		painel.add(Labels.getTitulo("Cadastro de alunos"));
 		painel.add(Labels.getNomeLabel("Nome"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo1(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("CPF"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo2(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("RG"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo3(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("Data de Nascimento"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo4(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("Matricula"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo5(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("logradouro"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo6(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("cidade"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo7(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("bairro"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo8(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("estado"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo9(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("complemento"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo10(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("numero"));
-		painel.add(css.getCampodeTexto(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getCampo11(Labels.getLabelX() + 200, Labels.getLabelY()));
+		painel.add(Utilidades.getButton(Labels.getLabelX() + 250, Labels.getLabelY() + 50));
 
 		Labels.setLabelNull();
 

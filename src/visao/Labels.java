@@ -9,7 +9,7 @@ public class Labels extends JLabel {
 
     public static JLabel getTitulo(String titulo){
         labelTitulo = new JLabel(titulo);
-        labelTitulo.setFont(css.getFonteTitulo());
+        labelTitulo.setFont(Utilidades.getFonteTitulo());
         labelTitulo.setBounds(180, 0, 500, 100);
         return labelTitulo;
     }
@@ -17,7 +17,7 @@ public class Labels extends JLabel {
     public static JLabel getNomeLabel(String rotulo){
         labelRotuloAux = labelRotulo;
         labelRotulo = new JLabel(rotulo);
-        labelRotulo.setFont(css.getFonteRotulo());
+        labelRotulo.setFont(Utilidades.getFonteRotulo());
         if(labelRotuloAux != null)
             labelRotulo.setBounds(0, labelRotuloAux.getY() + 50, 200, 50);
         else

@@ -10,6 +10,8 @@ public class Professor {
 	private String titulacao;
 	private String regimeTrabalho;
 	private String area;
+	private Endereco endereco;
+	private static Professor professor;
 	
 	public Professor(String nome, String cpf, String rg, String dataNascimento, String matricula, String titulacao,
 			String regimeTrabalho, String area) {
@@ -21,6 +23,23 @@ public class Professor {
 		this.titulacao = titulacao;
 		this.regimeTrabalho = regimeTrabalho;
 		this.area = area;
+	}
+
+	public Professor() {
+	}
+
+	public static void SetProfessor(Professor p){
+		professor = p;
+	}
+
+	public void setEndereco(String logradouro, String cidade, String bairro, String estado, String complemento, int numero){
+		endereco = new Endereco();
+		endereco.setLogradouro(logradouro);
+		endereco.setCidade(cidade);
+		endereco.setBairro(bairro);
+		endereco.setEstado(estado);
+		endereco.setComplemento(estado);
+		endereco.setNumero(numero);
 	}
 
 	public String getNome() {

@@ -9,7 +9,8 @@ public class Aluno {
 	private String matricula;
 	private String sexo;
 	private String curso;
-	
+	private Endereco endereco;
+	private static Aluno aluno;
 	
 	public Aluno(String nome, String cpf, String rg, String dataNascimento, String matricula, String endereco,
 			String sexo, String curso) {
@@ -22,8 +23,22 @@ public class Aluno {
 		this.curso = curso;
 	}
 
-	public void novoAluno(){
-		
+	public Aluno(){
+
+	}
+
+	public static void setAluno(Aluno A){
+		aluno = A;
+	}
+
+	public void setEndereco(String logradouro, String cidade, String bairro, String estado, String complemento, int numero){
+		endereco = new Endereco();
+		endereco.setLogradouro(logradouro);
+		endereco.setCidade(cidade);
+		endereco.setBairro(bairro);
+		endereco.setEstado(estado);
+		endereco.setComplemento(estado);
+		endereco.setNumero(numero);
 	}
 
 	public String getNome() {
