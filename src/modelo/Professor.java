@@ -11,7 +11,6 @@ public class Professor {
 	private String regimeTrabalho;
 	private String area;
 	private Endereco endereco;
-	private static Professor professor;
 	
 	public Professor(String nome, String cpf, String rg, String dataNascimento, String matricula, String titulacao,
 			String regimeTrabalho, String area) {
@@ -26,10 +25,6 @@ public class Professor {
 	}
 
 	public Professor() {
-	}
-
-	public static void SetProfessor(Professor p){
-		professor = p;
 	}
 
 	public void setEndereco(String logradouro, String cidade, String bairro, String estado, String complemento, int numero){

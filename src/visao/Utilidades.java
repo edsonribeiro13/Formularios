@@ -9,6 +9,7 @@ import javax.swing.JTextField;
 public class Utilidades {
 
     private static JButton botao = new JButton("Salvar");
+	private static JButton botaoPesquisa = new JButton("Buscar aluno");
     private static JTextField campo1 = new JTextField();
     private static JTextField campo2 = new JTextField();
     private static JTextField campo3 = new JTextField();
@@ -43,6 +44,11 @@ public class Utilidades {
     public static JButton getButton(int x, int y){
         botao.setBounds(x, y, 100, 50);
         return botao;
+    }
+	
+	public static JButton getButtonPesquisar(int x, int y){
+        botaoPesquisa.setBounds(x, y, 100, 50);
+        return botaoPesquisa;
     } 
 
     public static JButton getButton(){

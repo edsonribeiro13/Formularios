@@ -10,7 +10,7 @@ public class Aluno {
 	private String sexo;
 	private String curso;
 	private Endereco endereco;
-	private static Aluno aluno;
+	
 	
 	public Aluno(String nome, String cpf, String rg, String dataNascimento, String matricula, String endereco,
 			String sexo, String curso) {
@@ -25,10 +25,6 @@ public class Aluno {
 
 	public Aluno(){
 
-	}
-
-	public static void setAluno(Aluno A){
-		aluno = A;
 	}
 
 	public void setEndereco(String logradouro, String cidade, String bairro, String estado, String complemento, int numero){

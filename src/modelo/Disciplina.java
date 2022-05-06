@@ -6,11 +6,14 @@ public class Disciplina {
 	private String ementa;
 	private int cargaHoraria;
 	
-	
 	public Disciplina(String nome, String ementa, int cargaHoraria) {
 		this.nome = nome;
 		this.ementa = ementa;
 		this.cargaHoraria = cargaHoraria;
+	}
+
+	public Disciplina(){
+		
 	}
 
 	public String getNome() {

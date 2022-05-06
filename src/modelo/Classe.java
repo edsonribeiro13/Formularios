@@ -1,24 +1,23 @@
 package modelo;
 
+import java.util.ArrayList;
+
 public class Classe {
 
-	private Aluno[] alunos ;
+	private ArrayList<Aluno> alunos = new ArrayList<Aluno>();
 	private Professor professor;
 	private PeriodoLetivo periodoLetivo;
 	private Disciplina disciplina;
-	
-	public Classe(Aluno[] alunos, Professor professor, PeriodoLetivo periodoLetivo, Disciplina disciplina) {
-		this.alunos = alunos;
-		this.professor = professor;
-		this.periodoLetivo = periodoLetivo;
-		this.disciplina = disciplina;
+
+	public Classe(){
+
 	}
 
-	public Aluno[] getAlunos() {
+	public ArrayList<Aluno> getAlunos() {
 		return alunos;
 	}
 
-	public void setAlunos(Aluno[] alunos) {
+	public void setAlunos(ArrayList<Aluno> alunos) {
 		this.alunos = alunos;
 	}
 
