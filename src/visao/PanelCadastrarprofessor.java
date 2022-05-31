@@ -35,7 +35,7 @@ public class PanelCadastrarprofessor extends JPanel {
 		painel.add(Utilidades.getCampo6(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("Regime de Trabalho"));
 		painel.add(Utilidades.getCampo7(Labels.getLabelX() + 200, Labels.getLabelY()));
-		painel.add(Labels.getNomeLabel("Área"));
+		painel.add(Labels.getNomeLabel("Ã�rea"));
 		painel.add(Utilidades.getCampo8(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Labels.getNomeLabel("logradouro"));
 		painel.add(Utilidades.getCampo9(Labels.getLabelX() + 200, Labels.getLabelY()));

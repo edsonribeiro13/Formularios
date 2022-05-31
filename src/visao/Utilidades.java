@@ -9,7 +9,7 @@ import javax.swing.JTextField;
 public class Utilidades {
 
     private static JButton botao = new JButton("Salvar");
-	private static JButton botaoPesquisa = new JButton("Buscar aluno");
+	private static JButton botaoPesquisa = new JButton("Buscar");
     private static JTextField campo1 = new JTextField();
     private static JTextField campo2 = new JTextField();
     private static JTextField campo3 = new JTextField();
@@ -53,6 +53,10 @@ public class Utilidades {
 
     public static JButton getButton(){
         return botao;
+    }
+
+	public static JButton getButtonPesquisar(){
+        return botaoPesquisa;
     } 
 
     public static JTextField getCampo1(int x, int y) {
@@ -128,5 +132,135 @@ public class Utilidades {
 		return campo14;
 	}
 
+	public static void setTextField(){
+		campo1.setText("");
+		campo2.setText("");
+		campo3.setText("");
+		campo4.setText("");
+		campo5.setText("");
+		campo6.setText("");
+		campo7.setText("");
+		campo8.setText("");
+		campo9.setText("");
+		campo10.setText("");
+		campo11.setText("");
+		campo12.setText("");
+		campo13.setText("");
+		campo14.setText("");
+	}
+
+	public static JTextField getCampo1() {
+		return campo1;
+	}
+
+	public static void setCampo1(JTextField campo1) {
+		Utilidades.campo1 = campo1;
+	}
+
+	public static JTextField getCampo2() {
+		return campo2;
+	}
+
+	public static void setCampo2(JTextField campo2) {
+		Utilidades.campo2 = campo2;
+	}
+
+	public static JTextField getCampo3() {
+		return campo3;
+	}
+
+	public static void setCampo3(JTextField campo3) {
+		Utilidades.campo3 = campo3;
+	}
+
+	public static JTextField getCampo4() {
+		return campo4;
+	}
+
+	public static void setCampo4(JTextField campo4) {
+		Utilidades.campo4 = campo4;
+	}
+
+	public static JTextField getCampo5() {
+		return campo5;
+	}
+
+	public static void setCampo5(JTextField campo5) {
+		Utilidades.campo5 = campo5;
+	}
+
+	public static JTextField getCampo6() {
+		return campo6;
+	}
+
+	public static void setCampo6(JTextField campo6) {
+		Utilidades.campo6 = campo6;
+	}
+
+	public static JTextField getCampo7() {
+		return campo7;
+	}
+
+	public static void setCampo7(JTextField campo7) {
+		Utilidades.campo7 = campo7;
+	}
+
+	public static JTextField getCampo8() {
+		return campo8;
+	}
+
+	public static void setCampo8(JTextField campo8) {
+		Utilidades.campo8 = campo8;
+	}
+
+	public static JTextField getCampo9() {
+		return campo9;
+	}
+
+	public static void setCampo9(JTextField campo9) {
+		Utilidades.campo9 = campo9;
+	}
+
+	public static JTextField getCampo10() {
+		return campo10;
+	}
+
+	public static void setCampo10(JTextField campo10) {
+		Utilidades.campo10 = campo10;
+	}
+
+	public static JTextField getCampo11() {
+		return campo11;
+	}
+
+	public static void setCampo11(JTextField campo11) {
+		Utilidades.campo11 = campo11;
+	}
+
+	public static JTextField getCampo12() {
+		return campo12;
+	}
+
+	public static void setCampo12(JTextField campo12) {
+		Utilidades.campo12 = campo12;
+	}
+
+	public static JTextField getCampo13() {
+		return campo13;
+	}
+
+	public static void setCampo13(JTextField campo13) {
+		Utilidades.campo13 = campo13;
+	}
+
+	public static JTextField getCampo14() {
+		return campo14;
+	}
+
+	public static void setCampo14(JTextField campo14) {
+		Utilidades.campo14 = campo14;
+	}
+
+	
 
 }

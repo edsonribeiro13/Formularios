@@ -37,6 +37,10 @@ public class Professor {
 		endereco.setNumero(numero);
 	}
 
+	public Endereco getEndereço(){
+		return endereco;
+	}
+
 	public String getNome() {
 		return nome;
 	}

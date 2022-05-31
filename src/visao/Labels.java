@@ -3,7 +3,11 @@ package visao;
 import javax.swing.JLabel;
 
 public class Labels extends JLabel {
-    private static JLabel labelTitulo;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static JLabel labelTitulo;
     private static JLabel labelRotulo;
     private static JLabel labelRotuloAux;
 

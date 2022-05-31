@@ -27,6 +27,10 @@ public class Aluno {
 
 	}
 
+	public Endereco getEndereço(){
+		return endereco;
+	}
+
 	public void setEndereco(String logradouro, String cidade, String bairro, String estado, String complemento, int numero){
 		endereco = new Endereco();
 		endereco.setLogradouro(logradouro);

@@ -5,6 +5,7 @@ import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 import modelo.Aluno;
 import modelo.Classe;
@@ -17,11 +18,16 @@ import visao.TelaCadastroAluno;
 import visao.TelaCadastroClasse;
 import visao.TelaCadastroDisciplina;
 import visao.TelaCadastroPerLet;
+import visao.TelaConsultaProfessor;
 import visao.Utilidades;
 
 public class ControleBotao extends JButton implements MouseListener{
 
-    int i = 0;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	int i = 0;
     
     public ControleBotao(){
         Utilidades.getButton().addMouseListener(this);
@@ -35,48 +41,54 @@ public class ControleBotao extends JButton implements MouseListener{
     @Override
     public void mousePressed(MouseEvent e) {
         if(e.getComponent() == Utilidades.getButton()){
-            if(ControladorFrame.getPanel() == PanelCadastrarprofessor.criarPainel()){
+            if(ControladorFrame.getPanel() == PanelCadastrarprofessor.getCadastrarprofessor()){
                 Professor professor = new Professor();
-                professor.setNome(Utilidades.getCampo1(0,0).getText());
-                professor.setCpf(Utilidades.getCampo2(0,0).getText());
-                professor.setRg(Utilidades.getCampo3(0,0).getText());
-                professor.setDataNascimento(Utilidades.getCampo4(0,0).getText());
-                professor.setMatricula(Utilidades.getCampo5(0,0).getText());
-                professor.setTitulacao(Utilidades.getCampo6(0,0).getText());
-                professor.setRegimeTrabalho(Utilidades.getCampo7(0,0).getText());
-                professor.setArea(Utilidades.getCampo8(0,0).getText());
-                professor.setEndereco(Utilidades.getCampo9(0,0).getText(), 
-                Utilidades.getCampo10(0,0).getText(), 
-                Utilidades.getCampo11(0,0).getText(), 
-                Utilidades.getCampo12(0,0).getText(), 
-                Utilidades.getCampo13(0,0).getText(), 
-                Integer.parseInt(Utilidades.getCampo14(0,0).getText()));
+                professor.setNome(Utilidades.getCampo1().getText());
+                professor.setCpf(Utilidades.getCampo2().getText());
+                professor.setRg(Utilidades.getCampo3().getText());
+                professor.setDataNascimento(Utilidades.getCampo4().getText());
+                professor.setMatricula(Utilidades.getCampo5().getText());
+                professor.setTitulacao(Utilidades.getCampo6().getText());
+                professor.setRegimeTrabalho(Utilidades.getCampo7().getText());
+                professor.setArea(Utilidades.getCampo8().getText());
+                try{
+                    professor.setEndereco(Utilidades.getCampo9().getText(), 
+                    Utilidades.getCampo10().getText(), 
+                    Utilidades.getCampo11().getText(), 
+                    Utilidades.getCampo12().getText(), 
+                    Utilidades.getCampo13().getText(), 
+                    Integer.parseInt(Utilidades.getCampo14().getText()));
+                }
+                catch(Exception ex){}
                 Repositorio.SetProfessor(professor);
             }
-            if(ControladorFrame.getPanel() == TelaCadastroAluno.criarPainel()){
+            else if(ControladorFrame.getPanel() == TelaCadastroAluno.getTelaCadastroAluno()){
                 Aluno aluno = new Aluno();
-                aluno.setNome(Utilidades.getCampo1(0,0).getText());
-                aluno.setCpf(Utilidades.getCampo2(0,0).getText());
-                aluno.setRg(Utilidades.getCampo3(0,0).getText());
-                aluno.setDataNascimento(Utilidades.getCampo4(0,0).getText());
-                aluno.setMatricula(Utilidades.getCampo5(0,0).getText());
-                aluno.setSexo(Utilidades.getCampo6(0,0).getText());
-                aluno.setCurso(Utilidades.getCampo7(0,0).getText());
-                aluno.setEndereco(Utilidades.getCampo8(0,0).getText(), 
-                Utilidades.getCampo9(0,0).getText(), 
-                Utilidades.getCampo10(0,0).getText(), 
-                Utilidades.getCampo11(0,0).getText(), 
-                Utilidades.getCampo12(0,0).getText(), 
-                Integer.parseInt(Utilidades.getCampo13(0,0).getText()));
+                aluno.setNome(Utilidades.getCampo1().getText());
+                aluno.setCpf(Utilidades.getCampo2().getText());
+                aluno.setRg(Utilidades.getCampo3().getText());
+                aluno.setDataNascimento(Utilidades.getCampo4().getText());
+                aluno.setMatricula(Utilidades.getCampo5().getText());
+                aluno.setSexo(Utilidades.getCampo6().getText());
+                aluno.setCurso(Utilidades.getCampo7().getText());
+                try{
+                    aluno.setEndereco(Utilidades.getCampo8().getText(), 
+                    Utilidades.getCampo9().getText(), 
+                    Utilidades.getCampo10().getText(), 
+                    Utilidades.getCampo11().getText(), 
+                    Utilidades.getCampo12().getText(), 
+                    Integer.parseInt(Utilidades.getCampo13().getText()));
+                }
+                catch(Exception ex){}
                 Repositorio.setAluno(aluno);
             }
             //
-            if(ControladorFrame.getPanel() == TelaCadastroClasse.criarPainel()){
+            else if(ControladorFrame.getPanel() == TelaCadastroClasse.getTelaCadastroClasse()){
                 Classe classe = new Classe();
                 ArrayList<Aluno> alunos = new ArrayList<Aluno>();
                 int i = 0;
-                if(e.getComponent() == Utilidades.getButtonPesquisar(0, 0)){
-                    alunos.add(Repositorio.getAluno(Utilidades.getCampo1(0, 0).getText()));
+                if(e.getComponent() == Utilidades.getButtonPesquisar()){
+                    alunos.add(Repositorio.getAluno(Utilidades.getCampo1().getText()));
                     Aluno alunoAux = alunos.get(i);
                     if(alunoAux == null){
                         alunos.remove(i);
@@ -85,27 +97,39 @@ public class ControleBotao extends JButton implements MouseListener{
                     i++;
                 }
                 classe.setAlunos(alunos);
-                classe.setProfessor(Repositorio.getProfessor(Utilidades.getCampo2(0, 0).getText()));
-                classe.setPeriodoLetivo(Repositorio.getPeriodoLetivo(Utilidades.getCampo4(0, 0).getText()));
-                classe.setDisciplina(Repositorio.getDisciplina(Utilidades.getCampo4(0, 0).getText()));
+                classe.setProfessor(Repositorio.getProfessor(Utilidades.getCampo2().getText()));
+                classe.setPeriodoLetivo(Repositorio.getPeriodoLetivo(Utilidades.getCampo4().getText()));
+                classe.setDisciplina(Repositorio.getDisciplina(Utilidades.getCampo4().getText()));
                 Repositorio.SetClasse(classe);
             }
-            if(ControladorFrame.getPanel() == TelaCadastroDisciplina.criarPainel()){
+            else if(ControladorFrame.getPanel() == TelaCadastroDisciplina.getTelaCadastroDisciplina()){
                 Disciplina disciplina = new Disciplina();
-                disciplina.setNome(Utilidades.getCampo1(0,0).getText());
-                disciplina.setEmenta(Utilidades.getCampo2(0,0).getText());
-                disciplina.setCargaHoraria(Integer.parseInt(Utilidades.getCampo3(0,0).getText()));
+                disciplina.setNome(Utilidades.getCampo1().getText());
+                disciplina.setEmenta(Utilidades.getCampo2().getText());
+                disciplina.setCargaHoraria(Integer.parseInt(Utilidades.getCampo3().getText()));
                 Repositorio.setDisciplina(disciplina);
             }
-            if(ControladorFrame.getPanel() == TelaCadastroPerLet.criarPainel()){
+            else if(ControladorFrame.getPanel() == TelaCadastroPerLet.criarPainel()){
                 PeriodoLetivo per = new PeriodoLetivo();
-                per.setNome(Utilidades.getCampo1(0,0).getText());
-                per.setDiasLetivos(Integer.parseInt(Utilidades.getCampo2(0,0).getText()));
-                per.setDataInicio((Utilidades.getCampo3(0,0).getText()));
-                per.setDataFim((Utilidades.getCampo3(0,0).getText()));
+                per.setNome(Utilidades.getCampo1().getText());
+                per.setDiasLetivos(Integer.parseInt(Utilidades.getCampo2().getText()));
+                per.setDataInicio((Utilidades.getCampo3().getText()));
+                per.setDataFim((Utilidades.getCampo3().getText()));
                 Repositorio.setPeriodoLetivo(per);
             }
         }
+        else if(e.getComponent() == Utilidades.getButtonPesquisar()){
+            if(ControladorFrame.getPanel() == TelaConsultaProfessor.getPainel()){
+                Professor professor = new Professor();
+                professor = Repositorio.getProfessor(Utilidades.getCampo1().getText());
+                if (professor != null)
+                    TelaConsultaProfessor.criarPainel(professor);
+                else{
+                    new JOptionPane("Professor não existe");
+                }
+            }
+        }
+            Utilidades.setTextField();
     }
 
     @Override

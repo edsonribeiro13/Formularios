@@ -27,9 +27,9 @@ public class ControladorFrame{
 	}
 	
 	public static void main(String[] args) {
+		Frame.getFrame();
 		new ControleBarradeMenu();
 		new ControleBotao();
-		Frame.getFrame();
 	}
 	
 }

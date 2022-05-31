@@ -20,6 +20,13 @@ public class ControleBarradeMenu extends JMenuItem implements MouseListener{
 		MenuItems.getCadastroClasse().addMouseListener(this);
 		MenuItems.getCadastroDisciplina().addMouseListener(this);
 		MenuItems.getCadastroPerLet().addMouseListener(this);
+
+		MenuItems.getConsultaAluno().addMouseListener(this);
+		MenuItems.getConsultaClasse().addMouseListener(this);
+		MenuItems.getConsultaDisciplina().addMouseListener(this);
+		MenuItems.getConsultaPerLet().addMouseListener(this);
+		MenuItems.getConsultaProfessor().addMouseListener(this);
+
 		repaint();
 
 	}
@@ -31,23 +38,39 @@ public class ControleBarradeMenu extends JMenuItem implements MouseListener{
 	@Override
 	public void mousePressed(MouseEvent e) {
 		if(e.getComponent() == MenuItems.getCadastroProfessor()) {
-			ControladorFrame.getTelaCadastoProfessor();;
+			ControladorFrame.getTelaCadastoProfessor();
 			repaint();
 		}
-		if(e.getComponent() == MenuItems.getCadastroAluno()) {
+		else if(e.getComponent() == MenuItems.getCadastroAluno()) {
 			ControladorFrame.getTelaCadastroAluno();
 			repaint();
 		}
-		if(e.getComponent() == MenuItems.getCadastroClasse()) {
+		else if(e.getComponent() == MenuItems.getCadastroClasse()) {
 			ControladorFrame.getTelaCadastroClasse();
 			repaint();
 		}
-		if(e.getComponent() == MenuItems.getCadastroDisciplina()) {
+		else if(e.getComponent() == MenuItems.getCadastroDisciplina()) {
 			ControladorFrame.getTelaCadastroDisciplina();
 			repaint();
 		}
-		if(e.getComponent() == MenuItems.getCadastroPerLet()) {
-			ControladorFrame.getTelaCadastroPerLet();
+		else if(e.getComponent() == MenuItems.getConsultaAluno()) {
+			//ControladorFrame.getTelaConsultaPerLet();
+			repaint();
+		}
+		else if(e.getComponent() == MenuItems.getConsultaClasse()) {
+			//ControladorFrame.getTelaCadastroPerLet();
+			repaint();
+		}
+		else if(e.getComponent() == MenuItems.getConsultaDisciplina()) {
+			//ControladorFrame.getTelaCadastroPerLet();
+			repaint();
+		}
+		else if(e.getComponent() == MenuItems.getConsultaPerLet()) {
+			//ControladorFrame.getTelaCadastroPerLet();
+			repaint();
+		}
+		else if(e.getComponent() == MenuItems.getConsultaProfessor()) {
+			//ControladorFrame.getTelaCadastroPerLet();
 			repaint();
 		}
 	}

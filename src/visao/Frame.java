@@ -12,6 +12,7 @@ public class Frame extends JFrame {
 	private static final long serialVersionUID = 1L;
 	
 	private static JMenu menuSalvar;
+	private static JMenu menuConsulta;
 	
 	private static JMenuBar bar;
 	
@@ -48,6 +49,7 @@ public class Frame extends JFrame {
 		if(bar == null)
 			bar = new JMenuBar();
 		bar.add(getMenuSalvar());
+		bar.add(getMenuConsulta());
 		return bar;
 	}
 
@@ -60,5 +62,15 @@ public class Frame extends JFrame {
 		
 		return menuSalvar;
 	}
+
+	public static JMenu getMenuConsulta() {
+		if (menuConsulta == null) {
+			menuConsulta = new JMenu();
+		}
+		
+		menuConsulta = MenuItems.novoConsultar();
+		
+		return menuConsulta;
+	} 
 
 }
