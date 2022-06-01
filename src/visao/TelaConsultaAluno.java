@@ -19,7 +19,9 @@ public class TelaConsultaAluno extends JPanel{
         painel.add(Labels.getTitulo("Consultar alunos"));
 		painel.add(Labels.getNomeLabel("Nome"));
 		painel.add(Utilidades.getCampo1(Labels.getLabelX() + 200, Labels.getLabelY()));
-        painel.add(Utilidades.getButton(Utilidades.getCampo1().getX() + 50, Labels.getLabelY() + 100));
+        painel.add(Utilidades.getButtonPesquisar(Utilidades.getCampo1().getX() + 50, Labels.getLabelY() + 100));
+
+		Labels.setLabelNull();
 
         return painel;
 

@@ -42,12 +42,12 @@ public class Utilidades {
     }
 
     public static JButton getButton(int x, int y){
-        botao.setBounds(x, y, 100, 50);
+        Utilidades.botao.setBounds(x, y, 100, 50);
         return botao;
     }
 	
 	public static JButton getButtonPesquisar(int x, int y){
-        botaoPesquisa.setBounds(x, y, 100, 50);
+        Utilidades.botaoPesquisa.setBounds(x, y, 100, 50);
         return botaoPesquisa;
     } 
 
@@ -60,93 +60,93 @@ public class Utilidades {
     } 
 
     public static JTextField getCampo1(int x, int y) {
-		campo1.setBounds(x, y, 300, 40);
+		Utilidades.campo1.setBounds(x, y, 300, 40);
 		return campo1;
 	}
 
 	public static JTextField getCampo2(int x, int y) {
-		campo2.setBounds(x, y, 300, 40);
+		Utilidades.campo2.setBounds(x, y, 300, 40);
 		return campo2;
 	}
 
 	public static JTextField getCampo3(int x, int y) {
-		campo3.setBounds(x, y, 300, 40);
+		Utilidades.campo3.setBounds(x, y, 300, 40);
 		return campo3;
 	}
 
 	public static JTextField getCampo4(int x, int y) {
-		campo4.setBounds(x, y, 300, 40);
+		Utilidades.campo4.setBounds(x, y, 300, 40);
 
 		return campo4;
 	}
 
 	public static JTextField getCampo5(int x, int y) {
-		campo5.setBounds(x, y, 300, 40);
+		Utilidades.campo5.setBounds(x, y, 300, 40);
 		return campo5;
 	}
 
 	public static JTextField getCampo6(int x, int y) {
-		campo6.setBounds(x, y, 300, 40);
+		Utilidades.campo6.setBounds(x, y, 300, 40);
 
 		return campo6;
 	}
 
 	public static JTextField getCampo7(int x, int y) {
-		campo7.setBounds(x, y, 300, 40);
+		Utilidades.campo7.setBounds(x, y, 300, 40);
 		return campo7;
 	}
 
 	public static JTextField getCampo8(int x, int y) {
-		campo8.setBounds(x, y, 300, 40);
+		Utilidades.campo8.setBounds(x, y, 300, 40);
 
 		return campo8;
 	}
 
 	public static JTextField getCampo9(int x, int y) {
-		campo9.setBounds(x, y, 300, 40);
+		Utilidades.campo9.setBounds(x, y, 300, 40);
 		return campo9;
 	}
 
 	public static JTextField getCampo10(int x, int y) {
-		campo10.setBounds(x, y, 300, 40);
+		Utilidades.campo10.setBounds(x, y, 300, 40);
 		return campo10;
 	}
 
 	public static JTextField getCampo11(int x, int y) {
-		campo11.setBounds(x, y, 300, 40);
+		Utilidades.campo11.setBounds(x, y, 300, 40);
 		return campo11;
 	}
 
 	public static JTextField getCampo12(int x, int y) {
-		campo12.setBounds(x, y, 300, 40);
+		Utilidades.campo12.setBounds(x, y, 300, 40);
 		return campo12;
 	}
 
 	public static JTextField getCampo13(int x, int y) {
-		campo13.setBounds(x, y, 300, 40);
+		Utilidades.campo13.setBounds(x, y, 300, 40);
 		return campo13;
 	}
 	
 	public static JTextField getCampo14(int x, int y) {
-		campo14.setBounds(x, y, 300, 40);
+		Utilidades.campo14.setBounds(x, y, 300, 40);
 		return campo14;
 	}
 
 	public static void setTextField(){
-		campo1.setText("");
-		campo2.setText("");
-		campo3.setText("");
-		campo4.setText("");
-		campo5.setText("");
-		campo6.setText("");
-		campo7.setText("");
-		campo8.setText("");
-		campo9.setText("");
-		campo10.setText("");
-		campo11.setText("");
-		campo12.setText("");
-		campo13.setText("");
-		campo14.setText("");
+		getCampo1().setText("");
+		getCampo2().setText("");
+		getCampo3().setText("");
+		getCampo4().setText("");
+		getCampo5().setText("");
+		getCampo6().setText("");
+		getCampo7().setText("");
+		getCampo8().setText("");
+		getCampo9().setText("");
+		getCampo10().setText("");
+		getCampo11().setText("");
+		getCampo12().setText("");
+		getCampo13().setText("");
+		getCampo14().setText("");
 	}
 
 	public static JTextField getCampo1() {

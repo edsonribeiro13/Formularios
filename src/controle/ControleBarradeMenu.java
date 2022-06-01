@@ -22,9 +22,6 @@ public class ControleBarradeMenu extends JMenuItem implements MouseListener{
 		MenuItems.getCadastroPerLet().addMouseListener(this);
 
 		MenuItems.getConsultaAluno().addMouseListener(this);
-		MenuItems.getConsultaClasse().addMouseListener(this);
-		MenuItems.getConsultaDisciplina().addMouseListener(this);
-		MenuItems.getConsultaPerLet().addMouseListener(this);
 		MenuItems.getConsultaProfessor().addMouseListener(this);
 
 		repaint();
@@ -53,24 +50,16 @@ public class ControleBarradeMenu extends JMenuItem implements MouseListener{
 			ControladorFrame.getTelaCadastroDisciplina();
 			repaint();
 		}
+		else if(e.getComponent() == MenuItems.getCadastroPerLet()) {
+			ControladorFrame.getTelaCadastroPerLet();
+			repaint();
+		}
 		else if(e.getComponent() == MenuItems.getConsultaAluno()) {
-			//ControladorFrame.getTelaConsultaPerLet();
-			repaint();
-		}
-		else if(e.getComponent() == MenuItems.getConsultaClasse()) {
-			//ControladorFrame.getTelaCadastroPerLet();
-			repaint();
-		}
-		else if(e.getComponent() == MenuItems.getConsultaDisciplina()) {
-			//ControladorFrame.getTelaCadastroPerLet();
-			repaint();
-		}
-		else if(e.getComponent() == MenuItems.getConsultaPerLet()) {
-			//ControladorFrame.getTelaCadastroPerLet();
+			ControladorFrame.getTelaConsultaAluno();
 			repaint();
 		}
 		else if(e.getComponent() == MenuItems.getConsultaProfessor()) {
-			//ControladorFrame.getTelaCadastroPerLet();
+			ControladorFrame.getTelaConsultaProfessor();
 			repaint();
 		}
 	}

@@ -27,6 +27,8 @@ public class TelaConsultaProfessor extends JPanel{
 		painel.add(Utilidades.getCampo1(Labels.getLabelX() + 200, Labels.getLabelY()));
 		painel.add(Utilidades.getButton(Utilidades.getCampo1().getX() + 50, Labels.getLabelY() + 100));
 
+		Labels.setLabelNull();
+
         return painel;
 
     }

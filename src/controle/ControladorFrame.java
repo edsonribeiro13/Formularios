@@ -21,6 +21,12 @@ public class ControladorFrame{
 	public static void getTelaCadastroPerLet() {
 		Frame.getFrame().setContentPane(visao.TelaCadastroPerLet.getTelaCadastroPerLet());
 	}
+	public static void getTelaConsultaProfessor(){
+		Frame.getFrame().setContentPane(visao.TelaConsultaProfessor.getPainel());
+	}
+	public static void getTelaConsultaAluno(){
+		Frame.getFrame().setContentPane(visao.TelaConsultaAluno.getPainel());
+	}
 
 	public static JPanel getPanel(){
 		return (JPanel) Frame.getFrame().getContentPane();

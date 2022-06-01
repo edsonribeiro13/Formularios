@@ -13,12 +13,15 @@ import modelo.Disciplina;
 import modelo.PeriodoLetivo;
 import modelo.Professor;
 import repositorio.Repositorio;
+import visao.Frame;
 import visao.PanelCadastrarprofessor;
 import visao.TelaCadastroAluno;
 import visao.TelaCadastroClasse;
 import visao.TelaCadastroDisciplina;
 import visao.TelaCadastroPerLet;
+import visao.TelaConsultaAluno;
 import visao.TelaConsultaProfessor;
+import visao.TelaIni;
 import visao.Utilidades;
 
 public class ControleBotao extends JButton implements MouseListener{
@@ -31,6 +34,7 @@ public class ControleBotao extends JButton implements MouseListener{
     
     public ControleBotao(){
         Utilidades.getButton().addMouseListener(this);
+        Utilidades.getButtonPesquisar().addMouseListener(this);
     }
 
     @Override
@@ -106,13 +110,19 @@ public class ControleBotao extends JButton implements MouseListener{
                 Disciplina disciplina = new Disciplina();
                 disciplina.setNome(Utilidades.getCampo1().getText());
                 disciplina.setEmenta(Utilidades.getCampo2().getText());
-                disciplina.setCargaHoraria(Integer.parseInt(Utilidades.getCampo3().getText()));
+                try{
+                    disciplina.setCargaHoraria(Integer.parseInt(Utilidades.getCampo3().getText()));
+                }
+                catch(Exception ex){}
                 Repositorio.setDisciplina(disciplina);
             }
             else if(ControladorFrame.getPanel() == TelaCadastroPerLet.criarPainel()){
                 PeriodoLetivo per = new PeriodoLetivo();
                 per.setNome(Utilidades.getCampo1().getText());
-                per.setDiasLetivos(Integer.parseInt(Utilidades.getCampo2().getText()));
+                try{
+                    per.setDiasLetivos(Integer.parseInt(Utilidades.getCampo2().getText()));
+                }
+                catch(Exception ex){}
                 per.setDataInicio((Utilidades.getCampo3().getText()));
                 per.setDataFim((Utilidades.getCampo3().getText()));
                 Repositorio.setPeriodoLetivo(per);
@@ -125,11 +135,21 @@ public class ControleBotao extends JButton implements MouseListener{
                 if (professor != null)
                     TelaConsultaProfessor.criarPainel(professor);
                 else{
-                    new JOptionPane("Professor não existe");
+                    JOptionPane.showMessageDialog(null, "Professor não existe");
                 }
             }
+            if(ControladorFrame.getPanel() == TelaConsultaAluno.getPainel()){
+                Aluno aluno = new Aluno();
+                aluno = Repositorio.getAluno(Utilidades.getCampo1().getText());
+                if (aluno != null)
+                    TelaConsultaAluno.criarPainel(aluno);
+                else
+                    JOptionPane.showMessageDialog(null, "Aluno não existe");
+            }
         }
-            Utilidades.setTextField();
+        //System.out.println(Utilidades.getCampo1().getX());
+        Frame.getFrame().setContentPane(TelaIni.criarTela());
+        Utilidades.setTextField();
     }
 
     @Override

@@ -32,6 +32,8 @@ public class Frame extends JFrame {
 		frame.setLocationRelativeTo(null);
 		
 		frame.setJMenuBar(getBar());
+
+		frame.setContentPane(TelaIni.criarTela());
 		
 		return frame;
 	}

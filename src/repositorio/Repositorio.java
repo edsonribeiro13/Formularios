@@ -22,8 +22,9 @@ public class Repositorio{
 
     public static Aluno getAluno(String nome){
 		for(Aluno i : arrayAlunos){
-			if (i.getNome() == nome)
+			if (i.getNome().contains(nome)){
 				return i;
+			}
 		}
 		return null;
 	}
@@ -46,7 +47,7 @@ public class Repositorio{
 
 	public static Professor getProfessor(String nome){
 		for(Professor i : arrayProfessores){
-			if (i.getNome() == nome)
+			if (i.getNome().contains(nome))
 				return i;
 		}
 		return null;

@@ -1,6 +1,4 @@
 package visao;
-
-import java.awt.Color;
 import javax.swing.JPanel;
 
 public class TelaCadastroPerLet extends JPanel {
@@ -20,7 +18,7 @@ public class TelaCadastroPerLet extends JPanel {
 		painel.setVisible(true);
 		painel.setSize(790, 880);
 		painel.setLayout(null);
-		painel.setBackground(Color.BLACK);
+		painel.setBackground(Utilidades.getColor());
 
 		painel.add(Labels.getTitulo("Cadastro de Periodo"));
 		painel.add(Labels.getNomeLabel("Nome"));
@@ -42,8 +40,8 @@ public class TelaCadastroPerLet extends JPanel {
     public static TelaCadastroPerLet getTelaCadastroPerLet(){
 		if(painel == null){
 			painel = new TelaCadastroPerLet();
-			painel = TelaCadastroPerLet.criarPainel();
 		}
+		painel = TelaCadastroPerLet.criarPainel();
 
 		return painel;
 

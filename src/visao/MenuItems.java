@@ -20,9 +20,6 @@ public class MenuItems extends JMenuItem{
 	private static JMenu barradeMenuCon = new JMenu("Consultar");
 	private static JMenuItem consultaProfessor = new JMenuItem("Consultar Professor");
 	private static JMenuItem consultaAluno = new JMenuItem("Consultar Aluno");
-	private static JMenuItem consultaClasse = new JMenuItem("Consultar Classe");
-	private static JMenuItem consultaDisciplina = new JMenuItem("Consultar Disciplina");
-	private static JMenuItem consultaPerLet = new JMenuItem("Consultar Período Letivo");
 
 	
 	public static JMenu novoSalvar() {
@@ -40,9 +37,6 @@ public class MenuItems extends JMenuItem{
 		
 		barradeMenuCon.add(getConsultaProfessor());
 		barradeMenuCon.add(getConsultaAluno());
-		barradeMenuCon.add(getConsultaClasse());
-		barradeMenuCon.add(getConsultaDisciplina());
-		barradeMenuCon.add(getConsultaPerLet());
 		
 		return barradeMenuCon;
 	}
@@ -82,31 +76,5 @@ public class MenuItems extends JMenuItem{
 	public static void setConsultaAluno(JMenuItem consultaAluno) {
 		MenuItems.consultaAluno = consultaAluno;
 	}
-
-	public static JMenuItem getConsultaClasse() {
-		return consultaClasse;
-	}
-
-	public static void setConsultaClasse(JMenuItem consultaClasse) {
-		MenuItems.consultaClasse = consultaClasse;
-	}
-
-	public static JMenuItem getConsultaDisciplina() {
-		return consultaDisciplina;
-	}
-
-	public static void setConsultaDisciplina(JMenuItem consultaDisciplina) {
-		MenuItems.consultaDisciplina = consultaDisciplina;
-	}
-
-	public static JMenuItem getConsultaPerLet() {
-		return consultaPerLet;
-	}
-
-	public static void setConsultaPerLet(JMenuItem consultaPerLet) {
-		MenuItems.consultaPerLet = consultaPerLet;
-	}
-
 	
-		
 }

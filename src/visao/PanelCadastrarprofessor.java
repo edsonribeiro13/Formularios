@@ -60,8 +60,9 @@ public class PanelCadastrarprofessor extends JPanel {
 	public static PanelCadastrarprofessor getCadastrarprofessor(){
 		if(painel == null){
 			painel = new PanelCadastrarprofessor();
-			painel = PanelCadastrarprofessor.criarPainel();
 		}
+
+		painel = PanelCadastrarprofessor.criarPainel();
 
 		return painel;
 

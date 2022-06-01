@@ -42,8 +42,9 @@ public class TelaCadastroClasse extends JPanel {
     public static JPanel getTelaCadastroClasse() {
         if(painel == null){
 			painel = new TelaCadastroClasse();
-			painel = TelaCadastroClasse.criarPainel();
 		}
+
+		painel = TelaCadastroClasse.criarPainel();
 
 		return painel;
     }

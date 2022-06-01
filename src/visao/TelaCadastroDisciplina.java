@@ -1,7 +1,5 @@
 package visao;
 
-import java.awt.Color;
-
 import javax.swing.JPanel;
 
 public class TelaCadastroDisciplina extends JPanel {
@@ -20,7 +18,7 @@ public class TelaCadastroDisciplina extends JPanel {
 		painel.setVisible(true);
 		painel.setSize(790, 880);
 		painel.setLayout(null);
-		painel.setBackground(Color.BLACK);
+		painel.setBackground(Utilidades.getColor());
 
 		painel.add(Labels.getTitulo("Cadastro de Disciplina"));
 		painel.add(Labels.getNomeLabel("Nome"));
@@ -39,8 +37,9 @@ public class TelaCadastroDisciplina extends JPanel {
     public static JPanel getTelaCadastroDisciplina() {
         if(painel == null){
 			painel = new TelaCadastroDisciplina();
-			painel = TelaCadastroDisciplina.criarPainel();
 		}
+
+		painel = TelaCadastroDisciplina.criarPainel();
 
 		return painel;
     }
