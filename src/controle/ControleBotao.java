@@ -127,13 +127,14 @@ public class ControleBotao extends JButton implements MouseListener{
                 per.setDataFim((Utilidades.getCampo3().getText()));
                 Repositorio.setPeriodoLetivo(per);
             }
+            Frame.getFrame().setContentPane(TelaIni.criarTela());
         }
         else if(e.getComponent() == Utilidades.getButtonPesquisar()){
             if(ControladorFrame.getPanel() == TelaConsultaProfessor.getPainel()){
                 Professor professor = new Professor();
                 professor = Repositorio.getProfessor(Utilidades.getCampo1().getText());
                 if (professor != null)
-                    TelaConsultaProfessor.criarPainel(professor);
+                    Frame.getFrame().setContentPane(TelaConsultaProfessor.criarPainel(professor));
                 else{
                     JOptionPane.showMessageDialog(null, "Professor não existe");
                 }
@@ -141,14 +142,14 @@ public class ControleBotao extends JButton implements MouseListener{
             if(ControladorFrame.getPanel() == TelaConsultaAluno.getPainel()){
                 Aluno aluno = new Aluno();
                 aluno = Repositorio.getAluno(Utilidades.getCampo1().getText());
-                if (aluno != null)
-                    TelaConsultaAluno.criarPainel(aluno);
-                else
+                if (aluno != null){
+                    Frame.getFrame().setContentPane(TelaConsultaAluno.criarPainel(aluno));
+                }
+                else{
                     JOptionPane.showMessageDialog(null, "Aluno não existe");
+                }
             }
         }
-        //System.out.println(Utilidades.getCampo1().getX());
-        Frame.getFrame().setContentPane(TelaIni.criarTela());
         Utilidades.setTextField();
     }
 

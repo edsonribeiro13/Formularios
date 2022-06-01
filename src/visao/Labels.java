@@ -39,6 +39,7 @@ public class Labels extends JLabel {
 
     public static void setLabelNull(){
         labelRotulo = null;
+        labelTitulo = null;
     }
 
 }

@@ -34,7 +34,6 @@ public class TelaConsultaAluno extends JPanel{
 		painel.setLayout(null);
 		painel.setBackground(Utilidades.getColor());
 		
-		painel.add(Labels.getTitulo("Consulta de professores"));
 		painel.add(Labels.getNomeLabel("Nome"));
 		painel.add(Labels.getNomeLabel(aluno.getNome()));
 		painel.add(Labels.getNomeLabel("CPF"));
